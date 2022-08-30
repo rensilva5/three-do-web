@@ -1,7 +1,6 @@
-import { Input } from 'antd'
-// import Search from 'antd/lib/transfer/search'
 import { useState } from 'react'
-const {Search} = Input
+import { Input } from 'antd'
+const { Search } = Input
 
 
 export default function AddTask( { setTasklist }) {
@@ -9,6 +8,7 @@ export default function AddTask( { setTasklist }) {
     const addTask = () => {
         fetch('http://localhost:5555/tasks', {
         method: 'POST',
+        made: 'cors',
         headers: {
             'Content-Type': 'application/json'
         },
@@ -18,7 +18,6 @@ export default function AddTask( { setTasklist }) {
         .then(data => {
         setTasklist(data)
     setTask('')
-        
     })
     .catch(console.error)
 }
