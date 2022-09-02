@@ -4,7 +4,7 @@ export default function Login ({ setToken, setIsUser }) {
     const handleLogin = ({ email, password }) => {
         // post request to api.user
         // fetch('http:/localhost:5555/users', {
-        fetch('https://three-do-api-rs.web.app/users/login', {
+        fetch('https://three-do-api-rs.web.app/users/ogin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
