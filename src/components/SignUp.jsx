@@ -1,6 +1,6 @@
 import { Modal, Form, Input, Button } from "antd";
 
-export default function SignUp({ setToken }) {
+export default function SignUp({ setToken, setIsUser }) {
   const handleSignUp = ({ email, password }) => {
     // post request to api.users
     fetch("https://three-do-api-bc.web.app/users", {
@@ -36,10 +36,9 @@ export default function SignUp({ setToken }) {
           <Button type="primary" htmlType="submit">
             Sign up
           </Button>
-          {/* <Input /> */}
         </Form.Item>
         <p>
-          Already a user?{" "}
+          Already a user?
           <Button onClick={() => setIsUser(true)} type={"link"}>
             Login
           </Button>
