@@ -39,13 +39,11 @@ function App() {
             setTasklist={setTasklist}
           />
           <AddTask token={token} setTasklist={setTasklist} />
-          {!token ? (
-            isUser ? (
-              <login setIsUser={setIsUser} setToken={setToken} />
-            ) : (
-              <SignUp setIsUser={setIsUser} setToken={setToken} />
-            )
-          ) : null}
+          {!token ?
+            isUser
+            ? <Login setIsUser={setIsUser} setToken={setToken} />
+            : <SignUp setIsUser={setIsUser} setToken={setToken} />
+           : null } 
         </div>
       </Content>
       <Footer

@@ -13,7 +13,7 @@ export default function TodoListCard({
     const body = { done: !item.done };
 
     // fetch(`http://localhost:5555/task/${item.id}`, {
-    fetch(`https://three-do-api-bc.web/tasks/${item.id}`, {
+    fetch(`https://three-do-api-rs.web/tasks/${item.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
